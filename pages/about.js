@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Link from 'next/link';
+import Header from '../components/Header';
 
 export default function About() {
   return (
@@ -11,6 +12,7 @@ export default function About() {
       </Head>
 
       <main>
+      <Header />
         <h1 className={styles.title}>Hakkımda
         </h1>
 
