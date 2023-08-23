@@ -11,11 +11,11 @@ padding: 30px;
 
 
 export default () => (
-<div>
-    <HeaderDiv><Link href="/">Ana Sayfa</Link></HeaderDiv>
-    <div><Link href="/about">Hakkımızda</Link></div>
-    
+    <HeaderDiv>
+        <Link href="/">Ana Sayfa</Link>
+        <Link href="/about">Hakkımızda</Link>
+    </HeaderDiv>
     
 
-</div>
+
 );

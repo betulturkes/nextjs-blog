@@ -1,17 +1,16 @@
-import Link from 'next/link';
 import Header from './Header';
 import styled from 'styled-components';
 
-const StyledHeader = styled(Header)`
+const BodyDiv = styled.div`
 border:"0px solid yellow";
 background-color: red;
 `
 
 
 export default({title, children}) => (
-    <div>
+    <BodyDiv>
         <h1>{title}</h1>
-        <StyledHeader/>
+        <Header/>
         <div style = {{padding: "20px", margin:"20px",backgroundColor:"tomato"}}>{children}</div>
         <footer>
         <a
@@ -23,5 +22,5 @@ export default({title, children}) => (
             
         </a>
         </footer>
-    </div>
+    </BodyDiv>
 );
