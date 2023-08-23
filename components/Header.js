@@ -1,8 +1,18 @@
 import Link from 'next/link';
+import styled from "styled-components";
+
+const HeaderDiv = styled.div`
+color: #f00;
+border: 10px solid #f00;
+padding: 30px;
+;`
+
+
+
 
 export default () => (
 <div>
-    <div><Link href="/">Ana Sayfa</Link></div>
+    <HeaderDiv><Link href="/">Ana Sayfa</Link></HeaderDiv>
     <div><Link href="/about">Hakkımızda</Link></div>
     
     

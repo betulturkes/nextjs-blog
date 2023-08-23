@@ -1,5 +1,6 @@
+import Layout from '../components/Layout';
 export default function Home() {
   return (
-    <div>Ana Sayfa</div>
+    <Layout>Ana Sayfa</Layout>
   );
-}
+};
