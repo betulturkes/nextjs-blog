@@ -6,9 +6,14 @@ body{
     font-family: sans-serif;
     background-color: #333;
     color: #fff;
-    
-    
-}
+    a {
+        color: #fff;
+        text-decoration:none;
+        &:hover{
+            color: rgba(255, 255, 255,0.7);
+            }
+        } 
+    }
 `;
 
 

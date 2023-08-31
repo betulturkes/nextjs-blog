@@ -8,7 +8,7 @@ text-decoration: none;
 font-size: 16px;
 font-weight: bold;
 &:hover{
-    color: rgba(255,255,255,0.5)
+    color: rgba(255,255,255,0.7)
 }`
 ;
 
