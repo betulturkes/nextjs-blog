@@ -7,17 +7,7 @@ import md from 'markdown-it';
 
 
 export default ({frontmatter, content}) => {
-    const {title, author, category, date, bannerImage, tags} = frontmatter
-
-    // const router = useRouter();
-    // const{slug} = router.query;
-
-    // let foundItem = data.find((dataItem) => dataItem.slug === slug);
-
-    // if (!foundItem) {
-    //     return <Error statusCode={404} />
-    // }
-    
+    const {title, author, category, date, bannerImage, tags} = frontmatter   
     return (
         <Layout title={title}>
             <h1>{title}</h1>
