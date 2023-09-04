@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 
 const HeaderDiv = styled.div`
-background-color: #000;
+background-color:${process.env.NODE_ENV === "development" ? "#f00" : "#000"};
 `;  
 
 const HeaderInner = styled.div`
