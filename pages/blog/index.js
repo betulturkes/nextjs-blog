@@ -1,5 +1,7 @@
+import fs from 'fs';
+import matter from 'gray-matter';
+import Link from "next/link";
 import Layout from '../../components/Layout';
-import Button from '../../components/Button';
 import styled from "styled-components";
 
 const blogContents = [
@@ -34,26 +36,47 @@ const BlogWrapper = styled.div`
     gap: 10px;
 `;
 
-export default () => 
+export default ({posts}) => 
     (
         <Layout title="Blog">
             Burada yazılar yer alacak
             <BlogWrapper>
-                {
-                    blogContents.map((item, index) => (
-                        <BlogDiv key={index}>
-                            <H2>
-                                {item.title}        
-                            </H2>
-                            <p>
-                                {item.content}
-                            </p>
-                            <Button href={`/blog/${item.href}`}>Devamı</Button>
-                        </BlogDiv>
-
-                        )
-                )
-            }
+                {posts.map((post) =>{
+                    const{slug, frontmatter } = post;
+                    const {title, author, category, date, bannerImage, tags} = frontmatter;
+                    
+                    return(
+                        <article key= {title}>
+                            <Link href={`/blog/${slug}`}>
+                                <h1>{title}</h1>
+                            </Link>
+                            <h3>{author}</h3>
+                            <h3>{date}</h3>
+                        </article>
+                    );
+                })}
             </BlogWrapper>
         </Layout>
-    );
+);
+
+export async function getStaticProps(){
+    const files = fs.readdirSync('posts');
+
+    const posts = files.map((filename) =>{
+        const slug = filename.replace('.md','');
+        const readFile = fs.readFileSync(`posts/${filename}`, 'utf8');
+        const {data: frontmatter} = matter(readFile);
+
+        return{
+            slug,
+            frontmatter,
+        };
+    });
+
+    return {
+        props:{
+            posts,
+        },
+    };
+
+};
