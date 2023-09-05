@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "./Button";
 
 const HeaderDiv = styled.div`
-background-color:${process.env.NODE_ENV === "development" ? "#f00" : "#000"};
+background-color:${process.env.NODE_ENV === "development" ? "#000" : "#f00"};
 `;  
 
 const HeaderInner = styled.div`
@@ -21,6 +21,7 @@ export default () => (
         <Button href="/">Ana Sayfa</Button>
         <Button href="/about">Hakkımda</Button>
         <Button href="/blog">Blog</Button>
+        <Button href="/contact">İletişim</Button>
         </HeaderInner>
     </HeaderDiv>
     
