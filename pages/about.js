@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-export default () => 
+export default function About()
   (
     <Layout title="Hakkımızda">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 

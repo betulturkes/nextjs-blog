@@ -36,7 +36,7 @@ const Select = styled.select`
   }
 `;
 
-export default () => 
+export default function Contact() 
 {
   const { register, handleSubmit, formState: {errors} } = useForm();
   const onSubmit = (data) =>{

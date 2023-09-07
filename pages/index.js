@@ -1,5 +1,5 @@
 import Layout from '../components/Layout';
-export default () => {
+export default function Index() {
   const API_URL = process.env.API_URL;
   return (
     <Layout title="Anasayfa">
