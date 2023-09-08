@@ -1,6 +1,17 @@
-module.exports = {
-    compiler: {
-      // see https://styled-components.com/docs/tooling#babel-plugin for more info on the options.
-        styledComponents:true,
-    },
+const nextConfig = {
+  compiler:{
+    styledComponents: true,
+  },
+  images:{
+    remotePatterns: [
+      {
+        protocol:"https",
+        hostname: "images.punkapi.com",
+        port: "",
+        pathname:"/v2/**",
+      },
+    ],
+  },
 };
+
+module.exports =nextConfig;

@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
-export default function About()
-  (
+export default function About(){
+  return (
     <Layout title="Hakkımızda">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
       Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
@@ -11,4 +11,5 @@ export default function About()
       and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </Layout>
   );
+};
 

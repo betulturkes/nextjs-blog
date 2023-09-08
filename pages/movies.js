@@ -37,7 +37,7 @@ export default function Movies(){
       <BeerList>
       { data.map((item) =>(
         <BeerCard key={item.id}>
-          <img width= {100} alt= {item.name} src={item.image_url} loading="lazy"/>
+          <Image width= {100} height={100} alt= {item.name} src={item.image_url} loading="lazy"/>
           <b>{item.name}</b>;
         </BeerCard>
       ))} 
