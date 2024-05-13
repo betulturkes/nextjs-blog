@@ -1,10 +1,10 @@
 import Layout from '../components/Layout';
 export default function Index() {
   const API_URL = process.env.API_URL;
+  
   return (
-    <Layout title="Anasayfa">
+    <Layout title="Conference Management System">
       NODE_ENV<div>{process.env.NODE_ENV === "development" ? "DEV MODE" : "PRODUCT MODE"}</div>
-      paragraf
       <p>{API_URL}</p>
       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
       The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,

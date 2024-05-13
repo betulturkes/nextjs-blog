@@ -1,31 +1,39 @@
-import styled from "styled-components";
-import Button from "./Button";
+// Header.js
+
+import styled from 'styled-components';
+import StyledLink from './Button';
 
 const HeaderDiv = styled.div`
-background-color:${process.env.NODE_ENV === "development" ? "#000" : "#f00"};
-`;  
-
-const HeaderInner = styled.div`
-margin: auto;
-max-width: 800px;
-padding: 30px;
-display:flex;
-gap:20px;
-
+  background-color: rgba(82, 75, 79, 0.77); /* Daha saydam krem arka plan */
+  color: #4e342e; /* Kahverengi metin rengi */
+  padding: 20px; /* Kenar boşlukları */
+  border-bottom: 1px solid #8d6e63; /* İnce header çizgisi */
 `;
 
 
+
+const HeaderInner = styled.div`
+  max-width: 800px;
+  margin: auto;
+`;
+
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between; /* Butonları eşit boşluklarla dağıt */
+  align-items: center; /* Dikey olarak ortala */
+`;
+
 export default () => (
-    <HeaderDiv>
-        <HeaderInner>
-        <Button href="/">Ana Sayfa</Button>
-        <Button href="/about">Hakkımda</Button>
-        <Button href="/blog">Blog</Button>
-        <Button href="/movies">Filmler</Button>
-        <Button href="/contact">İletişim</Button>
-        </HeaderInner>
-    </HeaderDiv>
-    
-
-
+  <HeaderDiv>
+    <HeaderInner>
+      <Nav>
+        <StyledLink href="/">Ana Sayfa</StyledLink>
+        <StyledLink href="/about">Konferans Sistemi Hakkında</StyledLink>
+        <StyledLink href="/FileUpload">Dosya Yükleme</StyledLink>
+        <StyledLink href="/contact">İletişim</StyledLink>
+        
+      </Nav>
+    </HeaderInner>
+  </HeaderDiv>
 );
